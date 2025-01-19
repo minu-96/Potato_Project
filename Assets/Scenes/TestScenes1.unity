@@ -194,7 +194,7 @@ SpriteRenderer:
   m_Size: {x: 17.73, y: 14.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &211327556
@@ -835,7 +835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7860419984897058478, guid: 1faba05161b8b43d49c8ab811da8f90b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: TestScenes2
+      value: InGame0
       objectReference: {fileID: 0}
     - target: {fileID: 8926811700414150026, guid: 1faba05161b8b43d49c8ab811da8f90b, type: 3}
       propertyPath: m_text

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Chane_Scene2 : MonoBehaviour
 {
-    public void ChangeScene2(string TestScene2)
+    public void ChangeScene2(string InGame0)
     {
-        SceneManager.LoadScene(TestScene2);
+        SceneManager.LoadScene(InGame0);
     }
 }
