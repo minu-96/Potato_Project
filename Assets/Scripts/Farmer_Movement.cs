@@ -19,13 +19,18 @@ public class FarmerMovement : MonoBehaviour
     public AudioClip alertSound;
     private AudioSource audioSource;
 
+  
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+
+
     }
 
     void Update()
     {
+
         if (isChasing)
         {
             // 감자를 추적
@@ -47,6 +52,7 @@ public class FarmerMovement : MonoBehaviour
         Transform targetWaypoint = waypoints[currentWaypointIndex];
         Vector2 direction = (targetWaypoint.position - transform.position).normalized;
         transform.position = Vector2.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
+
 
         // 목표 Waypoint에 도달했는지 확인
         if (Vector2.Distance(transform.position, targetWaypoint.position) < 0.1f)
@@ -75,6 +81,7 @@ public class FarmerMovement : MonoBehaviour
     {
         // 감자를 향해 이동
         transform.position = Vector2.MoveTowards(transform.position, potato.position, chaseSpeed * Time.deltaTime);
+
 
         // 감자를 놓쳤는지 확인
         if (Vector2.Distance(transform.position, potato.position) > detectionRange)
