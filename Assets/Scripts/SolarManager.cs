@@ -1,5 +1,8 @@
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine; // Unity의 기본 기능 (GameObject, Transform 등)
+using System.Collections; // 코루틴 및 IEnumerator 관련 기능
+using System.Collections.Generic; // List, Dictionary 같은 컬렉션 사용 시 필요
+using UnityEditor.SceneManagement;
 
 public class SolarManager : MonoBehaviour
 {
@@ -15,9 +18,13 @@ public class SolarManager : MonoBehaviour
     public Transform spawnPoint; // 새 감자가 생성될 위치
     public GameObject Solar; //햇볕 오브젝트
 
+    [SerializeField] private GameObject mutationEffectPrefab; // 이펙트 프리펩 연결
+    [SerializeField] private Transform effectSpawnPoint; // 이펙트 생성 위치
+
     void Start()
     {
-
+        RoundStateManager.Instance.SaveState(mutationStage);
+        Debug.Log($"상태 저장 완료: 단계 {mutationStage}");
     }
 
     private void Update()
@@ -61,18 +68,25 @@ public class SolarManager : MonoBehaviour
     {
 
             mutationStage++; // 다음 단계로
+
+        // 상태 저장
+        RoundStateManager.Instance.SaveState(mutationStage);
+        Debug.Log($"상태 저장 완료: 단계 {mutationStage}");
+
             currentGauge = 0f; // 게이지 초기화
             mutationGauge.maxValue *= 2; // 다음 단계 게이지 증가
             mutationGauge.value = 0;
-            TransformToNextStage();
+            PlayMutationEffect();
 
         if (mutationStage == 1)
-            stageText.text = "독감자 1단계"; // 단계 텍스트 업데이트
+            stageText.text = "1단계"; // 단계 텍스트 업데이트
     }
-
-    void TransformToNextStage()
+    
+    private IEnumerator TransformToNextStage()
     {
         Debug.Log("단계가 변경됨: " + mutationStage);
+
+        yield return new WaitForSeconds(0.6f); // 1초 대기
 
         // 기존 캐릭터 제거
         if (currentPotato != null)
@@ -83,7 +97,38 @@ public class SolarManager : MonoBehaviour
 
         // 새로운 캐릭터 생성
         currentPotato = Instantiate(PotatoPrefabs, spawnPoint.position, Quaternion.identity);
+        
 
+    }
+
+    private void PlayMutationEffect()
+    {
+        if (mutationEffectPrefab != null && effectSpawnPoint != null)
+        {
+            Vector3 spawnPosition = effectSpawnPoint.position;
+            spawnPosition.z = 0; // Z값을 0으로 설정
+
+            // 이펙트 생성 후 감자의 자식으로 설정
+            GameObject effect = Instantiate(mutationEffectPrefab, effectSpawnPoint.position, Quaternion.identity);
+            effect.transform.SetParent(currentPotato.transform); // 감자와 동기화
+
+            // 일정 시간이 지나면 이펙트 제거
+            Destroy(effect, 0.5f);
+            Debug.Log("변이 이펙트 재생");
+            //StartCoroutine(DelayedAction()); //코루틴 호출
+        }
+        else
+        {
+            Debug.LogWarning("MutationEffectPrefab 또는 EffectSpawnPoint가 설정되지 않았습니다.");
+        }
+
+        StartCoroutine(TransformToNextStage());
+    }
+
+    private IEnumerator DelayedAction()
+    {
+        yield return new WaitForSeconds(0.5f); // 1초 대기
+        Debug.Log("1초 후 실행"); // 딜레이 후 실행
     }
 
 }

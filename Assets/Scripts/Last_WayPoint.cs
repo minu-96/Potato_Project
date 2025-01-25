@@ -11,7 +11,7 @@ public class Last_WayPoint : MonoBehaviour
         if (collision.gameObject.CompareTag("Farmer"))
         {
             Debug.Log("농부가 집에 갔습니다! 게임 종료!");
-            SceneManager.LoadScene("GameOver1");
+            //SceneManager.LoadScene("GameOver1");
         }
     }
 }

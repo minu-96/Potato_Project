@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8451183888693391420}
   - component: {fileID: 5117709024020392065}
   - component: {fileID: 491992620058183604}
+  - component: {fileID: 157361168680787087}
   m_Layer: 0
   m_Name: Test_Potato1
   m_TagString: Potato
@@ -184,3 +185,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &157361168680787087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491342552088904053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3caf806a62b4a3a8e5187f0630fb00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutationGauge: {fileID: 0}
+  mutationSpeed: 30
+  stageText: {fileID: 0}
+  currentPotato: {fileID: 0}
+  PotatoPrefabs: {fileID: 2458753624939423994, guid: 86cac486041d34fd5a19bb15a6e7744c, type: 3}
+  spawnPoint: {fileID: 1656742428885631144, guid: e48e6eb01d08446ef8c9b5a8cb20d04f, type: 3}
+  Solar: {fileID: 0}
+  mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
+  effectSpawnPoint: {fileID: 0}

@@ -90,7 +90,7 @@ public class FarmerMovement : MonoBehaviour
             exclamationMark.SetActive(false); // 느낌표 ㅂㅣ활성화
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Potato"))
@@ -99,4 +99,5 @@ public class FarmerMovement : MonoBehaviour
             SceneManager.LoadScene("GameOver0");
         }
     }
+    
 }

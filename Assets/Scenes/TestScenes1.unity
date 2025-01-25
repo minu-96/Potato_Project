@@ -236,23 +236,6 @@ MonoBehaviour:
   target: {fileID: 0}
   offset: {x: 0, y: 0, z: -10}
   smoothSpeed: 0.001
---- !u!1 &578157021 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3234232425657857238, guid: 1faba05161b8b43d49c8ab811da8f90b, type: 3}
-  m_PrefabInstance: {fileID: 1070642517}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &578157025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578157021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df0cf6b6d3b854dee921a19eaf567ddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1070642517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -376,7 +359,7 @@ PrefabInstance:
     - target: {fileID: 7860419984897058478, guid: 1faba05161b8b43d49c8ab811da8f90b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 578157025}
+      objectReference: {fileID: 0}
     - target: {fileID: 7860419984897058478, guid: 1faba05161b8b43d49c8ab811da8f90b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeScene2
@@ -397,10 +380,7 @@ PrefabInstance:
     - {fileID: 8305202697881179891, guid: 1faba05161b8b43d49c8ab811da8f90b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3234232425657857238, guid: 1faba05161b8b43d49c8ab811da8f90b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 578157025}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1faba05161b8b43d49c8ab811da8f90b, type: 3}
 --- !u!1 &1213507912
 GameObject:
