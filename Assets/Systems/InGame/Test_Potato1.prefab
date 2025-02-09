@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8451183888693391420}
   - component: {fileID: 5117709024020392065}
   - component: {fileID: 491992620058183604}
-  - component: {fileID: 157361168680787087}
+  - component: {fileID: 8359007050420083250}
   m_Layer: 0
   m_Name: Test_Potato1
   m_TagString: Potato
@@ -30,12 +30,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4491342552088904053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -0.33, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3073920437471232183
 SpriteRenderer:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267d0d7771c0146c78216728cb0bf1b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 2.3
 --- !u!50 &8451183888693391420
 Rigidbody2D:
   serializedVersion: 4
@@ -161,8 +161,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0046063066, y: -0.019853055}
-  m_Size: {x: 1.254942, y: 1.3969065}
+  m_Offset: {x: 0.020672202, y: -0.0004080534}
+  m_Size: {x: 1.204385, y: 1.3035705}
   m_Direction: 0
 --- !u!95 &491992620058183604
 Animator:
@@ -185,7 +185,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &157361168680787087
+--- !u!114 &8359007050420083250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,9 +200,9 @@ MonoBehaviour:
   mutationGauge: {fileID: 0}
   mutationSpeed: 30
   stageText: {fileID: 0}
-  currentPotato: {fileID: 0}
+  currentPotato: {fileID: 4491342552088904053}
   PotatoPrefabs: {fileID: 2458753624939423994, guid: 86cac486041d34fd5a19bb15a6e7744c, type: 3}
-  spawnPoint: {fileID: 1656742428885631144, guid: e48e6eb01d08446ef8c9b5a8cb20d04f, type: 3}
+  spawnPoint: {fileID: 0}
   Solar: {fileID: 0}
   mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
-  effectSpawnPoint: {fileID: 0}
+  effectSpawnPoint: {fileID: 7958233993759374172}

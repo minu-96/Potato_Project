@@ -12,10 +12,10 @@ public class StartNextRoundManager : MonoBehaviour
     {
 
         // 데이터 불러오기
-        RoundStateManager.Instance.LoadState(out int nextStage);
+        RoundStateManager.Instance.LoadState(out int PoisonStage);
 
         // 저장된 데이터를 현재 상태에 반영
-        mutationStage = nextStage;
+        mutationStage = PoisonStage;
         Debug.Log($"불러오기 완료: 단계 {mutationStage}");
 
         // UI 닫기 및 다음 라운드 준비

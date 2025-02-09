@@ -1,8 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     public float moveSpeed = 5f; // 캐릭터 이동 속도
 
     private Rigidbody2D rb; // Rigidbody2D 참조
@@ -18,11 +21,13 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         animator = GetComponent<Animator>();
+
+        Eat_Item.Instance.SaveSpeed(moveSpeed);
     }
 
     void Update()
     {
-        
+        moveSpeed = Eat_Item.Instance.moveSpeed;
         // 입력값 받아오기
          float movementx = Input.GetAxisRaw("Horizontal"); // A, D 또는 좌우 화살표
         float movementy = Input.GetAxisRaw("Vertical"); // W, S 또는 상하 화살표
@@ -52,4 +57,14 @@ public class PlayerMovement : MonoBehaviour
         // Rigidbody2D를 이용해 움직이기
         rb.velocity = move * moveSpeed;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Eat");
+        if (collision.gameObject.CompareTag("fertilizer"))
+        {
+            StartCoroutine(Eat_Item.Instance.SpeedUp(moveSpeed));
+        }
+    }
+
 }

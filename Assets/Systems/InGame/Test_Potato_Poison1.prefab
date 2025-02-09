@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5793125608946549313}
   - component: {fileID: 2223321061195694930}
   m_Layer: 0
-  m_Name: Test_Potato_Poison 1
+  m_Name: Test_Potato_Poison1
   m_TagString: Potato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
