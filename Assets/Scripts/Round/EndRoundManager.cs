@@ -31,7 +31,7 @@ public class EndRoundManager : MonoBehaviour
     public void EndRound()
     {
         currentRound++; // 라운드 번호 증가
-        roundText.text = "Round " + currentRound + " Completed!"; // 메시지 업데이트
+        //roundText.text = "Round " + currentRound + " Completed!"; // 메시지 업데이트
         // UI 활성화
         endRoundPanel.SetActive(true);
         Time.timeScale = 0f; // 일시 정지
