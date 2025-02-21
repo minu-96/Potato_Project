@@ -24,6 +24,7 @@ public class SolarManager : MonoBehaviour
 
     void Start()
     {
+        stageText.text = "0단계";
         RoundStateManager.Instance.SaveState(mutationStage);
         Debug.Log($"상태 저장 완료: 단계 {mutationStage}");
     }
@@ -107,6 +108,9 @@ public class SolarManager : MonoBehaviour
         currentPotato = Instantiate(PotatoPrefabs, spawnPoint.position, Quaternion.identity);
         */
 
+        //햇빛 오브젝트 제거
+        Destroy(Solar);
+
         Debug.Log("단계가 변경됨: " + mutationStage);
 
         if (currentPotato != null)
@@ -138,7 +142,7 @@ public class SolarManager : MonoBehaviour
 
         Debug.Log($"스폰 위치: {spawnPoint.position}");
 
-
+        
     }
 
     private void PlayMutationEffect()

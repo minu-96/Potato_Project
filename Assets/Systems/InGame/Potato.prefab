@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3073920437471232183}
   - component: {fileID: 1861864253046351155}
   - component: {fileID: 8451183888693391420}
-  - component: {fileID: 5117709024020392065}
   - component: {fileID: 491992620058183604}
-  - component: {fileID: 8359007050420083250}
+  - component: {fileID: 5206597843176593226}
+  - component: {fileID: 6654304161527089184}
   m_Layer: 0
   m_Name: Potato
   m_TagString: Potato
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3073920437471232183
 SpriteRenderer:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267d0d7771c0146c78216728cb0bf1b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.3
+  moveSpeed: 1.5
 --- !u!50 &8451183888693391420
 Rigidbody2D:
   serializedVersion: 4
@@ -129,8 +129,50 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &5117709024020392065
-CapsuleCollider2D:
+--- !u!95 &491992620058183604
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491342552088904053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8517a6afac76344929f1eebe30735432, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5206597843176593226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491342552088904053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3caf806a62b4a3a8e5187f0630fb00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutationGauge: {fileID: 3820365608226285286, guid: a7fe093c6fedd428e85edcc9babb2fef, type: 3}
+  mutationSpeed: 30
+  stageText: {fileID: 2048500378437149532, guid: b2ad0902f90434fc5857d10fc5ee68a0, type: 3}
+  currentPotato: {fileID: 4491342552088904053}
+  PotatoPrefabs: {fileID: 2458753624939423994, guid: 86cac486041d34fd5a19bb15a6e7744c, type: 3}
+  spawnPoint: {fileID: 7958233993759374172}
+  Solar: {fileID: 0}
+  mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
+  effectSpawnPoint: {fileID: 7958233993759374172}
+--- !u!58 &6654304161527089184
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -161,48 +203,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.020672202, y: -0.0004080534}
-  m_Size: {x: 1.204385, y: 1.3035705}
-  m_Direction: 0
---- !u!95 &491992620058183604
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4491342552088904053}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8517a6afac76344929f1eebe30735432, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8359007050420083250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4491342552088904053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a3caf806a62b4a3a8e5187f0630fb00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mutationGauge: {fileID: 0}
-  mutationSpeed: 30
-  stageText: {fileID: 0}
-  currentPotato: {fileID: 4491342552088904053}
-  PotatoPrefabs: {fileID: 2458753624939423994, guid: 86cac486041d34fd5a19bb15a6e7744c, type: 3}
-  spawnPoint: {fileID: 0}
-  Solar: {fileID: 0}
-  mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
-  effectSpawnPoint: {fileID: 7958233993759374172}
+  m_Offset: {x: -0.002186266, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.17155889

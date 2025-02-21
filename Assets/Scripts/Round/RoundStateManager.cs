@@ -1,5 +1,8 @@
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class RoundStateManager : MonoBehaviour
 {
@@ -7,6 +10,7 @@ public class RoundStateManager : MonoBehaviour
 
     // 저장할 데이터
     public int mutationStage; // 독감자 단계
+
     private void Awake()
     {
         // 싱글톤 초기화
