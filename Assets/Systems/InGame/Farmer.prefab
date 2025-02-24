@@ -121,7 +121,7 @@ Transform:
   m_Children:
   - {fileID: 4662721655858959629}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7509856816222899209
 SpriteRenderer:
@@ -188,9 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 2379243165372756148, guid: 19184817ccf6841d58d090aa83d84510, type: 3}
-  - {fileID: 8395508033241717739, guid: fedeb009507614136ab4213542695109, type: 3}
-  - {fileID: 2009886898886444653, guid: e4d0766b84dbf4f379de6e583401fe5b, type: 3}
+  - {fileID: 0}
   speed: 1
   chaseSpeed: 1
   detectionRange: 2
@@ -461,7 +459,7 @@ Animator:
   m_GameObject: {fileID: 4715263062728159820}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f848ead96f56d43abae34d20afce5b8c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98289e5bd85394733a233d02a3d005ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

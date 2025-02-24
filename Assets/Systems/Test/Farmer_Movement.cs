@@ -53,7 +53,7 @@ public class FarmerMovement : MonoBehaviour
         Vector2 direction = (targetWaypoint.position - transform.position).normalized;
         transform.position = Vector2.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
 
-
+        /*
         // 목표 Waypoint에 도달했는지 확인
         if (Vector2.Distance(transform.position, targetWaypoint.position) < 0.1f)
         {
@@ -64,6 +64,7 @@ public class FarmerMovement : MonoBehaviour
                 currentWaypointIndex = 0; // Waypoint 반복
             }
         }
+        */
     }
 
     void DetectPotato()

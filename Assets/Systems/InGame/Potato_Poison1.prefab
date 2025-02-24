@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 628503792246493862}
   - component: {fileID: 2223321061195694930}
   - component: {fileID: 5652202833638769840}
+  - component: {fileID: 6037204613263969882}
   m_Layer: 0
   m_Name: Potato_Poison1
   m_TagString: Potato
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267d0d7771c0146c78216728cb0bf1b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.3
+  moveSpeed: 1.5
 --- !u!50 &628503792246493862
 Rigidbody2D:
   serializedVersion: 4
@@ -184,3 +185,25 @@ CircleCollider2D:
   m_Offset: {x: -0.00095000135, y: 0}
   serializedVersion: 2
   m_Radius: 0.1735503
+--- !u!114 &6037204613263969882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458753624939423994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3caf806a62b4a3a8e5187f0630fb00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutationGauge: {fileID: 3820365608226285286, guid: a7fe093c6fedd428e85edcc9babb2fef, type: 3}
+  mutationSpeed: 30
+  stageText: {fileID: 2048500378437149532, guid: b2ad0902f90434fc5857d10fc5ee68a0, type: 3}
+  mutationStage: 1
+  currentPotato: {fileID: 4491342552088904053, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
+  PotatoPrefabs: {fileID: 2458753624939423994}
+  spawnPoint: {fileID: 7958233993759374172, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
+  Solar: {fileID: 0}
+  mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
+  effectSpawnPoint: {fileID: 7958233993759374172, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}

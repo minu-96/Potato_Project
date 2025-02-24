@@ -2,7 +2,7 @@ using UnityEngine.UI;
 using UnityEngine; // Unity의 기본 기능 (GameObject, Transform 등)
 using System.Collections; // 코루틴 및 IEnumerator 관련 기능
 using System.Collections.Generic; // List, Dictionary 같은 컬렉션 사용 시 필요
-using UnityEditor.SceneManagement;
+
 
 public class UI_TIME : MonoBehaviour
 {
@@ -35,9 +35,9 @@ public class UI_TIME : MonoBehaviour
             timeText.text = $"{hour:D2}:{minute:D2}"; // 08:00 형식으로 표시
         }
         if (hour == 18)
-        {
-            AAA();
-        }
+                {
+                    AAA();
+                }
     }
 
     private void AAA()

@@ -7,8 +7,7 @@ public class StartStage : MonoBehaviour
 {
     public int mutationStage;
 
-    public GameObject[] Potato0;
-    public GameObject Potato1;
+    public GameObject[] Potato;
 
     void Awake()
     {
@@ -29,12 +28,30 @@ public class StartStage : MonoBehaviour
 
         if (mutationStage == 0)
         {
-            Destroy(Potato0[1]);
+            Destroy(Potato[1]);
+            Destroy(Potato[2]);
+            Destroy(Potato[3]);
         }
 
         else if (mutationStage == 1)
         {
-            Destroy(Potato0[0]);
+            Destroy(Potato[0]);
+            Destroy(Potato[2]);
+            Destroy(Potato[3]);
+        }
+
+        else if (mutationStage == 2)
+        {
+            Destroy(Potato[0]);
+            Destroy(Potato[1]);
+            Destroy(Potato[3]);
+        }
+
+        else if (mutationStage == 3)
+        {
+            Destroy(Potato[0]);
+            Destroy(Potato[1]);
+            Destroy(Potato[2]);
         }
 
     }

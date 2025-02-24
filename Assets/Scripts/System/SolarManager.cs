@@ -2,7 +2,6 @@ using UnityEngine.UI;
 using UnityEngine; // Unity의 기본 기능 (GameObject, Transform 등)
 using System.Collections; // 코루틴 및 IEnumerator 관련 기능
 using System.Collections.Generic; // List, Dictionary 같은 컬렉션 사용 시 필요
-using UnityEditor.SceneManagement;
 
 public class SolarManager : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class SolarManager : MonoBehaviour
     private bool isInSunlight = false; // 햇볕에 감자가 있는지 확인
     private float currentGauge = 0f; // 현재 게이지 값
     public Text stageText; // 단계 표시 텍스트
-    private int mutationStage = 0; // 현재 단계 (예: 0 = 일반, 1 = 독감자 1단계 ...)
+    public int mutationStage = 0; // 현재 단계 (예: 0 = 일반, 1 = 독감자 1단계 ...)
 
     public GameObject currentPotato; // 현재 플레이어 감자
     public GameObject PotatoPrefabs; // 마지막 단계에서 생성할 새 감자 프리팹
@@ -24,9 +23,13 @@ public class SolarManager : MonoBehaviour
 
     void Start()
     {
-        stageText.text = "0단계";
-        RoundStateManager.Instance.SaveState(mutationStage);
-        Debug.Log($"상태 저장 완료: 단계 {mutationStage}");
+        stageText.text = "0/4";
+        RoundStateManager.Instance.LoadState(out mutationStage);
+        if(mutationStage == 3)
+        {
+            Destroy(Solar);
+        }
+        //Debug.Log($"상태 저장 완료: 단계 {mutationStage}");
     }
 
     private void Update()
@@ -88,7 +91,11 @@ public class SolarManager : MonoBehaviour
             PlayMutationEffect();
 
         if (mutationStage == 1)
-            stageText.text = "1단계"; // 단계 텍스트 업데이트
+            stageText.text = "1/3"; // 단계 텍스트 업데이트
+        if (mutationStage == 2)
+            stageText.text = "2/3";
+        if (mutationStage == 3)
+            stageText.text = "3/3";
     }
     
     private void TransformToNextStage()
