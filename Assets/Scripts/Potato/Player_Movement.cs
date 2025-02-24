@@ -22,12 +22,12 @@ public class PlayerMovement : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
-        Eat_Item.Instance.SaveSpeed(moveSpeed);
+        Set_Speed.Instance.SaveSpeed(moveSpeed);
     }
 
     void Update()
     {
-        moveSpeed = Eat_Item.Instance.moveSpeed;
+        moveSpeed = Set_Speed.Instance.moveSpeed;
         // 입력값 받아오기
          float movementx = Input.GetAxisRaw("Horizontal"); // A, D 또는 좌우 화살표
         float movementy = Input.GetAxisRaw("Vertical"); // W, S 또는 상하 화살표
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Eat");
         if (collision.gameObject.CompareTag("fertilizer"))
         {
-            StartCoroutine(Eat_Item.Instance.SpeedUp(moveSpeed));
+            StartCoroutine(Set_Speed.Instance.SpeedUp(moveSpeed));
         }
     }
 

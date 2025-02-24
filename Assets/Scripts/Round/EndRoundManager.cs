@@ -46,5 +46,9 @@ public class EndRoundManager : MonoBehaviour
         Debug.Log("4");
     }
 
+    public void ResetRound()
+    {
+        currentRound = 0;
+    }
     
 }

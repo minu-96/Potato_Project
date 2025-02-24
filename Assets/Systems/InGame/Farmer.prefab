@@ -191,7 +191,7 @@ MonoBehaviour:
   - {fileID: 0}
   speed: 1
   chaseSpeed: 1
-  detectionRange: 2
+  detectionRange: 3
   potato: {fileID: 7958233993759374172, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
   exclamationMark: {fileID: 2430239127328149787}
   alertSound: {fileID: 8300000, guid: 7d47e954ded2d412f99e4d7d11078d1b, type: 3}
@@ -367,7 +367,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eat_Item : MonoBehaviour
+public class Set_Speed : MonoBehaviour
 {
-    public static Eat_Item Instance;
+    public static Set_Speed Instance;
 
     public float moveSpeed = 1f; // 캐릭터 이동 속도
     public float SpeedMultiple = 2f; //이동속도 배율
@@ -23,15 +23,7 @@ public class Eat_Item : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Eat");
-        if (collision.gameObject.CompareTag("Potato"))
-        {
-            Destroy(gameObject);
-        }
-    }
-
+    
     public void SaveSpeed(float speed)
     {
         moveSpeed = speed;

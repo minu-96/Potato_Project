@@ -7,25 +7,61 @@ public class Set_Fertilizer_Point : MonoBehaviour
 {
     public Vector2 areaMin; //랜덤 위치 최소값
     public Vector2 areaMax; //랜덤 위치 최대값
-    public float time = 0f; //생성 시간
-
-
-    // Start is called before the first frame update
-    void Awake()
+    public GameObject fertillizerPrefab; // 생성할 오브젝트 프리팹
+    public Transform FertillizerTransform; // 부모가 될 Hole 오브젝트
+    public float spawnInterval = 3f; // 생성 간격 (초)
+    public int spawnCount = 1; // 한 번에 생성할 개수
+    
+    private void Start()
     {
-        StartCoroutine(SetTime());
-    }
+        StartCoroutine(SpawnFertillizer()); // 코루틴 실행
 
-    // Update is called once per frame
-    void Update()
-    {
+        StartCoroutine(ReSpawnFertillizer());
 
     }
-
-    IEnumerator SetTime()
+    private Vector3 GetRandomPosition()
     {
-        yield return new WaitForSeconds(time); // 일정 시간 대기
-
-        transform.position = new Vector2(Random.Range(areaMin.x, areaMax.x), Random.Range(areaMin.y, areaMax.y)); //비료 생성
+        float randomX = Random.Range(areaMin.x, areaMax.x);
+        float randomY = Random.Range(areaMin.y, areaMax.y);
+        return new Vector3(randomX, randomY, 0f) + FertillizerTransform.position;
     }
+
+    private IEnumerator SpawnFertillizer()
+    {
+        yield return new WaitForSeconds(spawnInterval); // 일정 시간 대기
+
+        for (int i = 0; i < spawnCount; i++)
+        {
+            Vector3 randomPosition = GetRandomPosition(); // 랜덤 위치 계산
+            GameObject spawnedObject = Instantiate(fertillizerPrefab, randomPosition, Quaternion.identity);
+
+            if (FertillizerTransform != null)
+            {
+                spawnedObject.transform.SetParent(FertillizerTransform);
+            }
+        }
+
+    }
+
+    private IEnumerator ReSpawnFertillizer()
+    {
+        yield return new WaitForSeconds(spawnInterval);
+
+        for (int j = 1; j > 0; j++)
+        {
+            yield return new WaitForSeconds(spawnInterval * 3); // 일정 시간 대기
+
+            for (int i = 0; i < spawnCount; i++)
+            {
+                Vector3 randomPosition = GetRandomPosition(); // 랜덤 위치 계산
+                GameObject spawnedObject = Instantiate(fertillizerPrefab, randomPosition, Quaternion.identity);
+
+                if (FertillizerTransform != null)
+                {
+                    spawnedObject.transform.SetParent(FertillizerTransform);
+                }
+            }
+        }
+    }
+
 }
