@@ -35,10 +35,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: DX
+    m_ConditionEvent: move
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: move
+    m_ConditionEvent: RightDown
+    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: RightUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4996203584649549349}
@@ -62,11 +65,14 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: DX
-    m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: move
+    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: LeftDown
+    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: LeftUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 890959859327362801}
@@ -135,6 +141,30 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: LeftDown
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: RightDown
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: LeftUp
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: RightUp
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -157,10 +187,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: DY
+    m_ConditionEvent: move
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: move
+    m_ConditionEvent: LeftUp
+    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: RightUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8725365206653484187}
@@ -245,11 +278,14 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: DY
-    m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: move
+    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: LeftDown
+    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: RightDown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4666367489774760009}

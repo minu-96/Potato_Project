@@ -31,15 +31,19 @@ public class UI_TIME : MonoBehaviour
                 minute = 0;
                 hour++;
             }
-
-            if (hour == 10)
+            /*
+            if (hour == 13)
             {
                 AAA();
             }
-
+            */
             timeText.text = $"{hour:D2}:{minute:D2}"; // 08:00 형식으로 표시
         }
-        
+        if (hour == 18)
+        {
+            AAA();
+        }
+
     }
 
     private void AAA()

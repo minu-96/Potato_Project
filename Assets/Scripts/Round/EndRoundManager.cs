@@ -9,10 +9,7 @@ public class EndRoundManager : MonoBehaviour
     public static EndRoundManager Instance;
 
     public GameObject endRoundPanel; // 라운드 종료 화면 (UI 패널)
-    public Text roundText; // 라운드 정보를 표시하는 Text
     public int currentRound = 0; // 현재 라운드 번호
-
-    public int mutationStage;
 
     private void Awake()
     {

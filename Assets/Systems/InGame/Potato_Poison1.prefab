@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2458753624939423994
+--- !u!1 &586403637357066088
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,13 +8,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1382379200663613548}
-  - component: {fileID: 3107356788584612986}
-  - component: {fileID: 7290444003813341081}
-  - component: {fileID: 628503792246493862}
-  - component: {fileID: 2223321061195694930}
-  - component: {fileID: 5652202833638769840}
-  - component: {fileID: 6037204613263969882}
+  - component: {fileID: 4336891350244622472}
+  - component: {fileID: 4946354287872853449}
+  - component: {fileID: 7521521807225083299}
+  - component: {fileID: 6715593767926297037}
+  - component: {fileID: 804671685167005190}
+  - component: {fileID: 2654927386780308220}
+  - component: {fileID: 5889121787189880873}
   m_Layer: 0
   m_Name: Potato_Poison1
   m_TagString: Potato
@@ -22,13 +22,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1382379200663613548
+--- !u!4 &4336891350244622472
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2458753624939423994}
+  m_GameObject: {fileID: 586403637357066088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.11, y: -0.33, z: 0}
   m_LocalScale: {x: 1.85, y: 1.85, z: 1}
@@ -37,13 +37,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3107356788584612986
+--- !u!212 &4946354287872853449
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2458753624939423994}
+  m_GameObject: {fileID: 586403637357066088}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -89,27 +89,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7290444003813341081
+--- !u!114 &7521521807225083299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2458753624939423994}
+  m_GameObject: {fileID: 586403637357066088}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 267d0d7771c0146c78216728cb0bf1b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
---- !u!50 &628503792246493862
+--- !u!50 &6715593767926297037
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2458753624939423994}
+  m_GameObject: {fileID: 586403637357066088}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -129,14 +129,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &2223321061195694930
+--- !u!95 &804671685167005190
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2458753624939423994}
+  m_GameObject: {fileID: 586403637357066088}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 25f8b05adf0af4a10a7f39943aaada95, type: 2}
@@ -150,13 +150,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &5652202833638769840
-CircleCollider2D:
+--- !u!114 &2654927386780308220
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2458753624939423994}
+  m_GameObject: {fileID: 586403637357066088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3caf806a62b4a3a8e5187f0630fb00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutationGauge: {fileID: 3820365608226285286, guid: a7fe093c6fedd428e85edcc9babb2fef, type: 3}
+  mutationSpeed: 9
+  stageText: {fileID: 2048500378437149532, guid: b2ad0902f90434fc5857d10fc5ee68a0, type: 3}
+  mutationStage: 1
+  currentPotato: {fileID: 586403637357066088}
+  PotatoPrefabs: {fileID: 2458753624939423994, guid: 7e04e18484e0a4fd19d2b0616d973ed2, type: 3}
+  spawnPoint: {fileID: 4336891350244622472}
+  Solar: {fileID: 616411079749756735, guid: bab6346395b22442583e794ec5e81a71, type: 3}
+  mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
+  effectSpawnPoint: {fileID: 4336891350244622472}
+--- !u!60 &5889121787189880873
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586403637357066088}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -182,28 +204,34 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00095000135, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1735503
---- !u!114 &6037204613263969882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2458753624939423994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a3caf806a62b4a3a8e5187f0630fb00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mutationGauge: {fileID: 3820365608226285286, guid: a7fe093c6fedd428e85edcc9babb2fef, type: 3}
-  mutationSpeed: 9
-  stageText: {fileID: 2048500378437149532, guid: b2ad0902f90434fc5857d10fc5ee68a0, type: 3}
-  mutationStage: 1
-  currentPotato: {fileID: 4491342552088904053, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
-  PotatoPrefabs: {fileID: 2458753624939423994}
-  spawnPoint: {fileID: 7958233993759374172, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
-  Solar: {fileID: 616411079749756735, guid: bab6346395b22442583e794ec5e81a71, type: 3}
-  mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
-  effectSpawnPoint: {fileID: 7958233993759374172, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.33, y: 0.32}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.043054003, y: 0.15945168}
+      - {x: -0.04348098, y: 0.1592594}
+      - {x: -0.08402697, y: 0.1357961}
+      - {x: -0.121307276, y: 0.09860743}
+      - {x: -0.14047708, y: 0.05117855}
+      - {x: -0.1640178, y: -0.011397398}
+      - {x: -0.16499999, y: -0.08078726}
+      - {x: -0.15176877, y: -0.09493296}
+      - {x: -0.11254643, y: -0.13562003}
+      - {x: -0.04304053, y: -0.15954089}
+      - {x: 0.0412727, y: -0.1596284}
+      - {x: 0.1138964, y: -0.136355}
+      - {x: 0.15268528, y: -0.09846076}
+      - {x: 0.16314492, y: -0.07883327}
+      - {x: 0.1637291, y: -0.012119259}
+      - {x: 0.14944947, y: 0.021330906}
+      - {x: 0.13111453, y: 0.0797103}
+      - {x: 0.08326846, y: 0.1388766}
+  m_UseDelaunayMesh: 0

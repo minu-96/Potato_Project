@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911dc55058c86466ba7f4e084c578117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaMin: {x: 8, y: 4}
-  areaMax: {x: -8, y: -4}
+  areaMin: {x: 7.5, y: 2}
+  areaMax: {x: -7.5, y: -2.7}

@@ -24,17 +24,31 @@ public class SolarManager : MonoBehaviour
     void Start()
     {
         RoundStateManager.Instance.LoadState(out mutationStage);
-        if(mutationStage == 3)
+        Debug.Log($"asdf{mutationStage}");
+
+        if (mutationStage >= 3)
         {
             Destroy(Solar);
         }
 
-        if (mutationStage == 1)
+        if (mutationStage < 1)
+        {
+            stageText.text = "0/3";
+        }
+        else if (mutationStage < 2)
+        {
             stageText.text = "1/3"; // 단계 텍스트 업데이트
-        if (mutationStage == 2)
+        }
+        else if (mutationStage < 3)
+        {
             stageText.text = "2/3";
-        if (mutationStage == 3)
+        }
+        else if (mutationStage < 4)
+        {
             stageText.text = "3/3";
+        }
+        else
+            stageText.text = "";
         //Debug.Log($"상태 저장 완료: 단계 {mutationStage}");
     }
 
@@ -59,6 +73,8 @@ public class SolarManager : MonoBehaviour
         {
             Debug.LogError("spawnPoint가 설정되지 않았습니다!");
         }
+
+        
 
     }
 

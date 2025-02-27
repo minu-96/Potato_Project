@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7290444003813341081}
   - component: {fileID: 628503792246493862}
   - component: {fileID: 2223321061195694930}
-  - component: {fileID: 789220123290430454}
   - component: {fileID: -665176320032171799}
+  - component: {fileID: 2133336547936785839}
   m_Layer: 0
   m_Name: Potato_Poison3
   m_TagString: Potato
@@ -150,8 +150,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &789220123290430454
-CircleCollider2D:
+--- !u!114 &-665176320032171799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458753624939423994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3caf806a62b4a3a8e5187f0630fb00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutationGauge: {fileID: 3820365608226285286, guid: a7fe093c6fedd428e85edcc9babb2fef, type: 3}
+  mutationSpeed: 7
+  stageText: {fileID: 2048500378437149532, guid: b2ad0902f90434fc5857d10fc5ee68a0, type: 3}
+  mutationStage: 3
+  currentPotato: {fileID: 2458753624939423994}
+  PotatoPrefabs: {fileID: 2458753624939423994}
+  spawnPoint: {fileID: 1382379200663613548}
+  Solar: {fileID: 616411079749756735, guid: bab6346395b22442583e794ec5e81a71, type: 3}
+  mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
+  effectSpawnPoint: {fileID: 1382379200663613548}
+--- !u!60 &2133336547936785839
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -183,27 +205,33 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.165
---- !u!114 &-665176320032171799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2458753624939423994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a3caf806a62b4a3a8e5187f0630fb00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mutationGauge: {fileID: 3820365608226285286, guid: a7fe093c6fedd428e85edcc9babb2fef, type: 3}
-  mutationSpeed: 7
-  stageText: {fileID: 2048500378437149532, guid: b2ad0902f90434fc5857d10fc5ee68a0, type: 3}
-  mutationStage: 3
-  currentPotato: {fileID: 4491342552088904053, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
-  PotatoPrefabs: {fileID: 2458753624939423994, guid: 86cac486041d34fd5a19bb15a6e7744c, type: 3}
-  spawnPoint: {fileID: 7958233993759374172, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
-  Solar: {fileID: 616411079749756735, guid: bab6346395b22442583e794ec5e81a71, type: 3}
-  mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
-  effectSpawnPoint: {fileID: 7958233993759374172, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.33, y: 0.32}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.043054003, y: 0.15945168}
+      - {x: -0.04348098, y: 0.1592594}
+      - {x: -0.08402697, y: 0.1357961}
+      - {x: -0.121307276, y: 0.09860743}
+      - {x: -0.14047708, y: 0.05117855}
+      - {x: -0.1640178, y: -0.011397398}
+      - {x: -0.16499999, y: -0.08078726}
+      - {x: -0.15176877, y: -0.09493296}
+      - {x: -0.11254643, y: -0.13562003}
+      - {x: -0.04304053, y: -0.15954089}
+      - {x: 0.0412727, y: -0.1596284}
+      - {x: 0.1138964, y: -0.136355}
+      - {x: 0.15268528, y: -0.09846076}
+      - {x: 0.16314492, y: -0.07883327}
+      - {x: 0.1637291, y: -0.012119259}
+      - {x: 0.14944947, y: 0.021330906}
+      - {x: 0.13111453, y: 0.0797103}
+      - {x: 0.08326846, y: 0.1388766}
+  m_UseDelaunayMesh: 0

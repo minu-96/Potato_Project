@@ -29,29 +29,41 @@ public class StartStage : MonoBehaviour
         if (mutationStage == 0)
         {
             Destroy(Potato[1]);
+            Debug.Log("1단계제거");
             Destroy(Potato[2]);
+            Debug.Log("2단계제거");
             Destroy(Potato[3]);
+            Debug.Log("3단계제거");
         }
 
         else if (mutationStage == 1)
         {
             Destroy(Potato[0]);
+            Debug.Log("0단계제거");
             Destroy(Potato[2]);
+            Debug.Log("2단계제거");
             Destroy(Potato[3]);
+            Debug.Log("3단계제거");
         }
 
         else if (mutationStage == 2)
         {
             Destroy(Potato[0]);
+            Debug.Log("0단계제거");
             Destroy(Potato[1]);
+            Debug.Log("1단계제거");
             Destroy(Potato[3]);
+            Debug.Log("3단계제거");
         }
 
         else if (mutationStage == 3)
         {
             Destroy(Potato[0]);
+            Debug.Log("0단계제거");
             Destroy(Potato[1]);
+            Debug.Log("1단계제거");
             Destroy(Potato[2]);
+            Debug.Log("2단계제거");
         }
 
     }

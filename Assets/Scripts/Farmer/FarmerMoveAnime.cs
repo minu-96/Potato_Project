@@ -23,6 +23,10 @@ public class FarmerMoveAnime : MonoBehaviour
         animator.SetFloat("DX", direction.x);
         animator.SetFloat("DY", direction.y);
         animator.SetFloat("move", direction.sqrMagnitude);
+        animator.SetFloat("LeftUp", direction.y + direction.x);
+        animator.SetFloat("LeftDown", direction.x - direction.y);
+        animator.SetFloat("RightUp", direction.y - direction.x);
+        animator.SetFloat("RightDown", direction.y + direction.x);
 
         previousPosition = currentPosition;
     }

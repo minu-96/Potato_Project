@@ -37,19 +37,21 @@ public class asdfasdf : MonoBehaviour
     {
         // 씬에서 오브젝트 1 찾기
         target = GameObject.FindWithTag("Potato");
-        if (isChasing)
-        {
-            // 감자를 추적
-            ChasePotato();
-        }
-        else
-        {
-            // 정해진 경로를 따라 이동
-            MoveAlongWaypoints();
 
-            // 감자 감지
-            DetectPotato();
-        }
+            if (isChasing)
+            {
+                // 감자를 추적
+                ChasePotato();
+            }
+            else
+            {
+                // 정해진 경로를 따라 이동
+                MoveAlongWaypoints();
+
+                // 감자 감지
+                DetectPotato();
+            }
+
     }
 
     void MoveAlongWaypoints()
