@@ -378,11 +378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3891529837530424151, guid: f2bcb8c28396b45aabff40d9c7c90448, type: 3}
       propertyPath: speed
-      value: 1.4
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3891529837530424151, guid: f2bcb8c28396b45aabff40d9c7c90448, type: 3}
       propertyPath: chaseSpeed
-      value: 1.8
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 3891529837530424151, guid: f2bcb8c28396b45aabff40d9c7c90448, type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -1955,7 +1955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5012376916996570483, guid: 17143a7f3bfd84263a7b20ff1f16866d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: GameOver1
+      value: InGame5
       objectReference: {fileID: 0}
     - target: {fileID: 5846460957340155273, guid: 17143a7f3bfd84263a7b20ff1f16866d, type: 3}
       propertyPath: m_Sprite

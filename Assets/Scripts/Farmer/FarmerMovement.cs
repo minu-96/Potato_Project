@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class asdfasdf : MonoBehaviour
+public class FarmerMovement : MonoBehaviour
 {
 
     private GameObject target; // 오브젝트 1의 게임 오브젝트
@@ -23,10 +23,14 @@ public class asdfasdf : MonoBehaviour
     public AudioClip alertSound;
     private AudioSource audioSource;
 
+    private int currentStage;
 
 
     private void Start()
     {
+        RoundStateManager.Instance.LoadState(out int PoisonStage);
+        currentStage = PoisonStage;
+
         audioSource = GetComponent<AudioSource>();
 
         // 씬에서 오브젝트 1 찾기
@@ -118,8 +122,17 @@ public class asdfasdf : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Potato"))
         {
-            Debug.Log("감자가 잡혔습니다! 게임 종료!");
-            SceneManager.LoadScene("GameOver0");
+            if(currentStage >= 3)
+            {
+                Debug.Log("감자가 던져졌습니다! 게임 종료!");
+                SceneManager.LoadScene("GameOver2");
+            }
+            else
+            {
+                Debug.Log("감자가 잡혔습니다! 게임 종료!");
+                SceneManager.LoadScene("GameOver0");
+            }
+            
         }
     }
 

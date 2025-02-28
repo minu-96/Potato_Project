@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FarmerMovement : MonoBehaviour
+public class asdfasdf : MonoBehaviour
 {
     public Transform[] waypoints; // 경로 점(waypoint)을 저장하는 배열
     public float speed = 2f; // 이동 속도

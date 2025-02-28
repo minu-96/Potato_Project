@@ -16,7 +16,8 @@ public class UI_TIME : MonoBehaviour
     private void Start()
     {
         StartCoroutine(UpdateTime());
-        
+        timeText.text = $"{hour:D2}:{minute:D2}";
+
     }
 
     private IEnumerator UpdateTime()
