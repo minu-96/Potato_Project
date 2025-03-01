@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &17947700 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7533045466182875288, guid: 17143a7f3bfd84263a7b20ff1f16866d, type: 3}
-  m_PrefabInstance: {fileID: 5819985492351465631}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &46824340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9116070797610155531, guid: caaf442c47ba34160b72de36dfb9f656, type: 3}
@@ -627,6 +616,7 @@ Transform:
   - {fileID: 1876442113}
   - {fileID: 46824340}
   - {fileID: 779727569}
+  - {fileID: 1197526639}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -706,6 +696,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929447548}
   m_CullTransparentMesh: 1
+--- !u!1 &1197526638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197526639}
+  - component: {fileID: 1197526640}
+  m_Layer: 0
+  m_Name: Coin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1197526639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197526638}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.36, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 895502902}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1197526640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197526638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccf254d0abc7436a9e2ca8b7df2d527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 1375084397743785719, guid: 5e34881243cd24cbda1f7fd05489eefa, type: 3}
+  spawnInterval: 1
+  coinLifetime: 5
+  spawnAreaMin: {x: 4, y: 0}
+  spawnAreaMax: {x: -8.5, y: -3.5}
 --- !u!114 &1309152585 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1909949186205163627, guid: 766c6aa481cc24877ac5e701fc7a8d12, type: 3}
@@ -771,7 +810,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endRoundPanel: {fileID: 1539556357}
-  roundText: {fileID: 17947700}
   currentRound: 1
 --- !u!4 &1819136494
 Transform:
