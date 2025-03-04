@@ -6,7 +6,7 @@ public class Total_Coins : MonoBehaviour
 {
     public static Total_Coins Instance;
     private int coins = 0;
-    private int beforecoin = 0;
+    //private int beforecoin = 0;
 
     private void Awake()
     {
@@ -25,12 +25,12 @@ public class Total_Coins : MonoBehaviour
 
     public void SaveTotalCoin(int amount)
     {
-        coins -= beforecoin;
+        //coins -= beforecoin;
         coins += amount;
         Debug.Log($"저장 코인 갯수 {coins}");
         PlayerPrefs.SetInt("TotalCoin", coins);
         PlayerPrefs.Save();
-        beforecoin = coins;
+        //beforecoin = coins;
 
     }
 

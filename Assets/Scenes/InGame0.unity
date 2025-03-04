@@ -196,17 +196,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &293857502 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2161884157859658861, guid: 766c6aa481cc24877ac5e701fc7a8d12, type: 3}
-  m_PrefabInstance: {fileID: 3563399921045489375}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &295248001
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +499,7 @@ PrefabInstance:
     - target: {fileID: 5206597843176593226, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
       propertyPath: stageText
       value: 
-      objectReference: {fileID: 293857502}
+      objectReference: {fileID: 0}
     - target: {fileID: 5206597843176593226, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
       propertyPath: mutationGauge
       value: 
@@ -530,7 +519,7 @@ PrefabInstance:
     - target: {fileID: 7779901616565450417, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
       propertyPath: stageText
       value: 
-      objectReference: {fileID: 293857502}
+      objectReference: {fileID: 3563399921045489377}
     - target: {fileID: 7779901616565450417, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
       propertyPath: mutationGauge
       value: 
@@ -1424,6 +1413,17 @@ PrefabInstance:
 --- !u!114 &3563399921045489376 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4379759142338237796, guid: 766c6aa481cc24877ac5e701fc7a8d12, type: 3}
+  m_PrefabInstance: {fileID: 3563399921045489375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3563399921045489377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3220607068619809039, guid: 766c6aa481cc24877ac5e701fc7a8d12, type: 3}
   m_PrefabInstance: {fileID: 3563399921045489375}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

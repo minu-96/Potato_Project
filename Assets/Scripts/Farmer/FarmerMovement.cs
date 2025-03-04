@@ -124,6 +124,7 @@ public class FarmerMovement : MonoBehaviour
         {
             if(currentStage >= 3)
             {
+                Coin_Value.instance.SaveCoin();
                 Debug.Log("감자가 던져졌습니다! 게임 종료!");
                 SceneManager.LoadScene("GameOver2");
                 ScoreManager.instance.SaveScore();

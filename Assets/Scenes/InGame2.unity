@@ -1180,7 +1180,7 @@ PrefabInstance:
     - target: {fileID: 5206597843176593226, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
       propertyPath: stageText
       value: 
-      objectReference: {fileID: 1164233256}
+      objectReference: {fileID: 0}
     - target: {fileID: 5206597843176593226, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
       propertyPath: mutationGauge
       value: 
@@ -1496,7 +1496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &1164233256 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2161884157859658861, guid: 766c6aa481cc24877ac5e701fc7a8d12, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3220607068619809039, guid: 766c6aa481cc24877ac5e701fc7a8d12, type: 3}
   m_PrefabInstance: {fileID: 1164233253}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

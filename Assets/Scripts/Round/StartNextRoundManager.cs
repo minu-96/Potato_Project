@@ -13,7 +13,7 @@ public class StartNextRoundManager : MonoBehaviour
 
         // 데이터 불러오기
         RoundStateManager.Instance.LoadState(out int PoisonStage);
-        Coin_Value.instance.SaveCoin();
+        //Coin_Value.instance.SaveCoin();
 
         // 저장된 데이터를 현재 상태에 반영
         mutationStage = PoisonStage;

@@ -164,12 +164,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mutationGauge: {fileID: 3820365608226285286, guid: a7fe093c6fedd428e85edcc9babb2fef, type: 3}
   mutationSpeed: 9
-  stageText: {fileID: 2048500378437149532, guid: b2ad0902f90434fc5857d10fc5ee68a0, type: 3}
+  stageText: {fileID: 3302994960327011235, guid: 8432aeeeeed194c4fb132539f4b41e81, type: 3}
   mutationStage: 1
   currentPotato: {fileID: 586403637357066088}
   PotatoPrefabs: {fileID: 2458753624939423994, guid: 7e04e18484e0a4fd19d2b0616d973ed2, type: 3}
   spawnPoint: {fileID: 4336891350244622472}
-  Solar: {fileID: 616411079749756735, guid: bab6346395b22442583e794ec5e81a71, type: 3}
+  Solar: {fileID: 5330827568263418552, guid: ea130b5c5c9404b3298d5546797f4ade, type: 3}
   mutationEffectPrefab: {fileID: 3238831854673861886, guid: ff3b77edc59884a3c92641102f7b46fb, type: 3}
   effectSpawnPoint: {fileID: 4336891350244622472}
 --- !u!60 &5889121787189880873

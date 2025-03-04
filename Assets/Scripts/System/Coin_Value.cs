@@ -8,6 +8,9 @@ public class Coin_Value : MonoBehaviour
     public static Coin_Value instance;
     public int coinValue = 0;
 
+    public AudioClip alertSound;
+    private AudioSource audioSource;
+
     private void Awake()
     {
         if (instance == null)
@@ -16,8 +19,14 @@ public class Coin_Value : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void AddCoin(int amount)
     {
+        audioSource.PlayOneShot(alertSound);
         coinValue += amount;
     }
 
