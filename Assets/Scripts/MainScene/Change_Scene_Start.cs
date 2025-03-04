@@ -20,6 +20,8 @@ public class Change_Scene_Start : MonoBehaviour
 
     public void ChangeSceneStart(string GameStartScene)
     {
+        Coin_Value.instance.SetCoinValue();
+        ScoreManager.instance.SetScore();
         RoundStateManager.Instance.SaveState(resetlevel);
         EndRoundManager.Instance.ResetRound();
         SceneManager.LoadScene(GameStartScene);

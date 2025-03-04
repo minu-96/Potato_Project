@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 179085106936842307}
   - component: {fileID: 6334046163130286982}
   - component: {fileID: 8914461940924797506}
-  - component: {fileID: 678464175056573267}
+  - component: {fileID: 4156304730497562080}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -200,9 +200,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 678464175056573267}
-        m_TargetAssemblyTypeName: Chane_Scene1, Assembly-CSharp
-        m_MethodName: ChangeScene1
+      - m_Target: {fileID: 4156304730497562080}
+        m_TargetAssemblyTypeName: Retry_Button_Pause, Assembly-CSharp
+        m_MethodName: RetryGame
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -212,7 +212,7 @@ MonoBehaviour:
           m_StringArgument: InGame0
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &678464175056573267
+--- !u!114 &4156304730497562080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 416821316246408605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ce3b3b080dd437d920075cec5505dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 93590a0f6d3a34f8a90d554c52a88dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1840455975643820514
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 6266848897775952015}
   - component: {fileID: 9049592503765200015}
   - component: {fileID: 8302282289314355421}
-  - component: {fileID: 8860766299360589709}
+  - component: {fileID: 4527629421089717628}
   m_Layer: 5
   m_Name: MainButton
   m_TagString: Untagged
@@ -495,9 +495,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8860766299360589709}
-        m_TargetAssemblyTypeName: Chane_Scene_MainMenu, Assembly-CSharp
-        m_MethodName: ChangeScene1
+      - m_Target: {fileID: 4527629421089717628}
+        m_TargetAssemblyTypeName: Retry_Button_Pause, Assembly-CSharp
+        m_MethodName: RetryGame
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -507,7 +507,7 @@ MonoBehaviour:
           m_StringArgument: GameStart0
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8860766299360589709
+--- !u!114 &4527629421089717628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -516,6 +516,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6466270032927116836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0201b5c01d964a2292b0fdece8df89e, type: 3}
+  m_Script: {fileID: 11500000, guid: 93590a0f6d3a34f8a90d554c52a88dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

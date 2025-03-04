@@ -15,10 +15,14 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    public void SetScore()
+    {
+        currentScore = 0;
+    }
+
     public void AddScore(int amount)
     {
         currentScore += amount;
-        SaveScore();
     }
 
     public void SaveScore()
@@ -47,4 +51,6 @@ public class ScoreManager : MonoBehaviour
 
         PlayerPrefs.Save();
     }
+
+    
 }

@@ -126,11 +126,13 @@ public class FarmerMovement : MonoBehaviour
             {
                 Debug.Log("감자가 던져졌습니다! 게임 종료!");
                 SceneManager.LoadScene("GameOver2");
+                ScoreManager.instance.SaveScore();
             }
             else
             {
                 Debug.Log("감자가 잡혔습니다! 게임 종료!");
                 SceneManager.LoadScene("GameOver0");
+                ScoreManager.instance.SaveScore();
             }
             
         }
