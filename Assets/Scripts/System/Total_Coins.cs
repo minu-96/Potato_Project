@@ -41,4 +41,9 @@ public class Total_Coins : MonoBehaviour
         PlayerPrefs.SetInt("TotalCoin", coins);
         PlayerPrefs.Save();
     }
+
+    public void ZeroCoin()
+    {
+        coins = 0;
+    }
 }
