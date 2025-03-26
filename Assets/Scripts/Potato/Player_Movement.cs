@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed = 5f; // 캐릭터 이동 속도
 
+    public float speedDivide = 0.5f;
+
     private Rigidbody2D rb; // Rigidbody2D 참조
     private Vector2 move; // 입력값 저장
 
@@ -66,5 +68,6 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Set_Speed.Instance.SpeedUp(moveSpeed));
         }
     }
+   
 
 }

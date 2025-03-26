@@ -9,6 +9,7 @@ TagManager:
   - Farmer
   - Sunlight
   - fertilizer
+  - Hole
   layers:
   - Default
   - TransparentFX

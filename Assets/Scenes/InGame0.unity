@@ -242,10 +242,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 4619225153880095774, guid: 5afcf5bd8ed3640f7b88800dab1c3fa7, type: 3}
   holeTransform: {fileID: 295248002}
-  spawnInterval: 1
+  spawnInterval: 0
   spawnCount: 15
   areaMin: {x: 5, y: 1}
   areaMax: {x: -9.6, y: -4.44}
+  potato: {fileID: 1713162538}
+  minDistanceFromPotato: 1
+  maxAttempts: 10
 --- !u!4 &328767519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2379243165372756148, guid: 19184817ccf6841d58d090aa83d84510, type: 3}
@@ -711,6 +714,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3530367699311261947, guid: 17143a7f3bfd84263a7b20ff1f16866d, type: 3}
   m_PrefabInstance: {fileID: 5819985492351465631}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1713162538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5164060905650087391, guid: 0aa6f03159e1d46cc861aeb8eca4b64e, type: 3}
+  m_PrefabInstance: {fileID: 779943215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1819136491
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +777,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1876442112
 GameObject:
@@ -1821,7 +1829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7734049438903963764, guid: ca6f30af4be92463f87ec0eeec602200, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7734049438903963764, guid: ca6f30af4be92463f87ec0eeec602200, type: 3}
       propertyPath: m_LocalPosition.x

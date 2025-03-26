@@ -1992,10 +1992,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 4619225153880095774, guid: 5afcf5bd8ed3640f7b88800dab1c3fa7, type: 3}
   holeTransform: {fileID: 1872261640}
-  spawnInterval: 1
+  spawnInterval: 0
   spawnCount: 15
   areaMin: {x: 5, y: 1}
   areaMax: {x: -9.6, y: -4.44}
+  potato: {fileID: 1367501638}
+  minDistanceFromPotato: 1
+  maxAttempts: 10
 --- !u!1 &1980357332
 GameObject:
   m_ObjectHideFlags: 0
