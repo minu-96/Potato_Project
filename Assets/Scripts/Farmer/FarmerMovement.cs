@@ -10,6 +10,8 @@ public class FarmerMovement : MonoBehaviour
     private GameObject target; // 오브젝트 1의 게임 오브젝트
 
     public Transform[] waypoints; // 경로 점(waypoint)을 저장하는 배열
+    public float holeSpeed = 1f; // 구덩이 속도
+    public float defaultSpeed = 1f; // 기본 이동 속도
     public float speed = 2f; // 이동 속도
     public float chaseSpeed = 4f; // 추적 시 속도
     public float detectionRange = 5f; // 감자를 감지할 범위
@@ -137,8 +139,20 @@ public class FarmerMovement : MonoBehaviour
             }
             
         }
+
+        else if (collision.gameObject.CompareTag("Hole"))
+        {
+            speed = holeSpeed;
+        }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hole"))
+        {
+            speed = defaultSpeed;
+        }
+    }
 }
 
     

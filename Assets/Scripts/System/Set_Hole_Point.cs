@@ -15,7 +15,7 @@ public class Set_Hole_Point : MonoBehaviour
 
     public Transform potato; // 감자의 Transform
     public float minDistanceFromPotato = 1f; // 감자로부터 최소 거리
-    public int maxAttempts = 10; // 위치 찾기 최대 시도 횟수
+    public int maxAttempts = 20; // 위치 찾기 최대 시도 횟수
 
     private void Start()
     {

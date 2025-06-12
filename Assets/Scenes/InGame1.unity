@@ -660,7 +660,7 @@ MonoBehaviour:
   areaMax: {x: -9.6, y: -4.44}
   potato: {fileID: 2146383447}
   minDistanceFromPotato: 1
-  maxAttempts: 10
+  maxAttempts: 20
 --- !u!1001 &736802415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1244,8 +1244,16 @@ PrefabInstance:
       value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 3891529837530424151, guid: f2bcb8c28396b45aabff40d9c7c90448, type: 3}
+      propertyPath: holeSpeed
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891529837530424151, guid: f2bcb8c28396b45aabff40d9c7c90448, type: 3}
       propertyPath: chaseSpeed
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891529837530424151, guid: f2bcb8c28396b45aabff40d9c7c90448, type: 3}
+      propertyPath: defaultSpeed
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 3891529837530424151, guid: f2bcb8c28396b45aabff40d9c7c90448, type: 3}
       propertyPath: waypoints.Array.data[0]

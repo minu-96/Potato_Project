@@ -248,7 +248,7 @@ MonoBehaviour:
   areaMax: {x: -9.6, y: -4.44}
   potato: {fileID: 1713162538}
   minDistanceFromPotato: 1
-  maxAttempts: 10
+  maxAttempts: 20
 --- !u!4 &328767519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2379243165372756148, guid: 19184817ccf6841d58d090aa83d84510, type: 3}
