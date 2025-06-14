@@ -654,13 +654,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 4619225153880095774, guid: 5afcf5bd8ed3640f7b88800dab1c3fa7, type: 3}
   holeTransform: {fileID: 728281311}
-  spawnInterval: 0
+  spawnInterval: 0.35
   spawnCount: 15
   areaMin: {x: 5, y: 1}
   areaMax: {x: -9.6, y: -4.44}
-  potato: {fileID: 2146383447}
+  potato: {fileID: 1370883254}
   minDistanceFromPotato: 1
-  maxAttempts: 20
+  maxAttempts: 30
 --- !u!1001 &736802415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -760,6 +760,10 @@ PrefabInstance:
     - target: {fileID: 2458753624939423994, guid: 7e04e18484e0a4fd19d2b0616d973ed2, type: 3}
       propertyPath: m_Name
       value: Potato_Poison2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458753624939423994, guid: 7e04e18484e0a4fd19d2b0616d973ed2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1099,6 +1103,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146383447}
     m_Modifications:
+    - target: {fileID: 586403637357066088, guid: 86cac486041d34fd5a19bb15a6e7744c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1382379200663613548, guid: 86cac486041d34fd5a19bb15a6e7744c, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1414,6 +1422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potato_Poison3
       objectReference: {fileID: 0}
+    - target: {fileID: 2458753624939423994, guid: a8d760849ccbe4971b4996948349735f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1429,6 +1441,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1382379200663613548, guid: a8d760849ccbe4971b4996948349735f, type: 3}
   m_PrefabInstance: {fileID: 1332829593}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1370883253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370883254}
+  m_Layer: 0
+  m_Name: PotatoTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1370883254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370883253}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.337551, y: -1.7387311, z: -0.112356536}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2146383447}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403623960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,6 +2224,7 @@ Transform:
   - {fileID: 1332829595}
   - {fileID: 69694034}
   - {fileID: 1227957650}
+  - {fileID: 1370883254}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -26,4 +26,12 @@ public class StartNextRoundManager : MonoBehaviour
         Time.timeScale = 1f; // 게임 재개
 
     }
+    public void OverRound(string scene)
+    {
+        RoundStateManager.Instance.LoadState(out int PoisonStage);
+        if (PoisonStage == 3)
+        {
+            SceneManager.LoadScene(scene);
+        }
+    }
 }

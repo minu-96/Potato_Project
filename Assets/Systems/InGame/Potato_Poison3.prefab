@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
+  speedDivide: 0.5
 --- !u!50 &628503792246493862
 Rigidbody2D:
   serializedVersion: 4

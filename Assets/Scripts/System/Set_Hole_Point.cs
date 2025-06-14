@@ -33,11 +33,12 @@ public class Set_Hole_Point : MonoBehaviour
 
                 for (int k = 0; k < maxAttempts; k++)
                 {
-                    // 감자와의 거리 검사
-                    if (Vector2.Distance(randomPosition, potato.position) <= minDistanceFromPotato)
-                    {
-                        randomPosition = GetRandomPosition();
-                    }
+                    
+                     // 감자와의 거리 검사
+                        if (Vector2.Distance(randomPosition, potato.position) <= minDistanceFromPotato)
+                        {
+                            randomPosition = GetRandomPosition();
+                        }
                 }
 
             GameObject spawnedObject = Instantiate(objectPrefab, randomPosition, Quaternion.identity);
