@@ -21,10 +21,18 @@ public class SolarManager : MonoBehaviour
     [SerializeField] private Transform effectSpawnPoint; // 이펙트 생성 위치
     private Animator particleAnimator;
 
+    [Header("런처 연동")]
+    public int unlockStage = 3;                  // 이 단계(일차) 이상이면 해금 (3 = "3/3", 3일차)
+    public string unlockGameName = "ThePotato";  // 해금할 런처 게임 이름
+    private bool unlocked = false;
+
     void Start()
     {
         RoundStateManager.Instance.LoadState(out mutationStage);
         Debug.Log($"asdf{mutationStage}");
+
+        // 저장된 단계가 이미 조건을 넘었으면 해금
+        CheckUnlock();
 
         if (mutationStage >= 3)
         {
@@ -97,6 +105,16 @@ public class SolarManager : MonoBehaviour
         }
     }
 
+    // 조건(unlockStage 이상) 달성 시 런처에 해금 기록 (한 번만)
+    private void CheckUnlock()
+    {
+        if (!unlocked && mutationStage >= unlockStage)
+        {
+            unlocked = true;
+            PotatoUnlock.Unlock(unlockGameName);
+        }
+    }
+
     private void MutatePotato()
     {
 
@@ -105,6 +123,9 @@ public class SolarManager : MonoBehaviour
         // 상태 저장
         RoundStateManager.Instance.SaveState(mutationStage);
         Debug.Log($"상태 저장 완료: 단계 {mutationStage}");
+
+        // 조건 달성 시 런처 해금
+        CheckUnlock();
 
             currentGauge = 0f; // 게이지 초기화
             mutationGauge.value = 0;
